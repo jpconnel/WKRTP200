@@ -80,6 +80,8 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
     # need to do a bit of reordering
     boxes = [(y, x + w, y + h, x) for (x, y, w, h) in rects]
 
+    # WHAT IS THE SIZE OF BOXES (IS IT A BUNCH OF TUPLES??)
+	
     # compute the facial embeddings for each face bounding box
     encodings = face_recognition.face_encodings(rgb, boxes)
     names = []
